@@ -172,24 +172,19 @@ gulp.task('images', function () {
 });
 
 gulp.task('htmlminify', function () {
-  return (
-    gulp
-      .src('source/*.html')
-      .pipe(
-          plugins.revReplace({
-            manifest: gulp.src('build/manifest/manifest.json')
-          })
-      )
-     .pipe(plugins.posthtml([
-        plugins.posthtmlInclude()
-     ]))
-      .pipe(
-          plugins.htmlMinifier2({
-            collapseWhitespace: true
-          })
-      )
-      .pipe(gulp.dest('build/'))
-  );
+  return gulp.src('source/*.html')
+    .pipe(
+        plugins.revReplace({
+          manifest: gulp.src('build/manifest/manifest.json')
+        })
+    )
+    .pipe(plugins.posthtml([plugins.posthtmlInclude()]))
+    .pipe(
+        plugins.htmlMinifier2({
+          collapseWhitespace: true
+        })
+    )
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('copy', function () {
@@ -279,8 +274,4 @@ gulp.task('dev', function (fn) {
       'server',
       fn
   );
-});
-
-gulp.task("deploy", function () {
-  return gulp.src("./build/**/*").pipe(plugins.ghPagesWill());
 });
