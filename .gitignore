@@ -1,0 +1,16 @@
+npm-debug.*
+source/css/*.css
+Thumbs.db
+node_modules/
+.DS_Store
+css/
+Thumbs.db
+.idea
+*.sublime*
+*.log
+*.psd
+*.ai
+*.pdf
+build/
+css/style.css
+.publish

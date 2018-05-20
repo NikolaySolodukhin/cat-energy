@@ -1,0 +1,8 @@
+.programs__content-center {
+  @include content-center;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}

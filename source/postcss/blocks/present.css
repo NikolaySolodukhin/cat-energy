@@ -1,0 +1,67 @@
+.present {
+  position: relative;
+  margin: 39px var(--padding-mobile) 34px;
+  text-align: center;
+  background-color: var(--color-primary);
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (--retina) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @include tablet {
+    margin: 72px var(--padding-tablet) 79px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (--retina) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    max-width: 245px;
+    margin: 0 0 65px;
+    padding: 38px 40px 50px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (--retina) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.present__icon {
+  position: absolute;
+  top: 68px;
+  left: 51%;
+  transform: translateX(-30px);
+  fill: white;
+
+  @include tablet {
+    top: 62px;
+    left: 90px;
+    transform: translateX(0);
+  }
+
+  @include desktop {
+    left: 95px;
+  }
+}
+
+.present__text {
+  padding: 190px 58px 46px;
+  @include copytext(16px,18px);
+  color: white;
+
+  @include tablet {
+    padding: 70px 122px 70px 420px;
+    text-align: left;
+  }
+
+  @include desktop {
+    padding: 150px 0 0;
+    text-align: center;
+  }
+}

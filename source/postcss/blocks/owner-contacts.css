@@ -1,0 +1,136 @@
+.owner-contacts {
+  padding-top: 30px;
+  border: none;
+
+  @include tablet {
+    padding-top: 19px;
+  }
+}
+
+.owner-contacts__content-center {
+  padding-top: 30px;
+  @include content-center;
+
+  @include tablet {
+    padding: 0 var(--padding-tablet-form);
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--padding-desktop);
+  }
+}
+
+.owner-contacts__title {
+  padding-left: var(--padding-mobile);
+  border-bottom: 2px solid var(--color-primary);
+  transform: translateY(-34px);
+  @include titletext(24px, 24px);
+
+  @include tablet {
+    margin-top: 60px;
+    margin-bottom: 72px;
+    padding-left: var(--padding-tablet-form);
+    transform: translateY(-14px);
+  }
+
+  @include desktop {
+    margin-top: 52px;
+    padding-left: var(--padding-desktop);
+  }
+}
+
+.owner-contacts__title-text {
+  display: block;
+  max-width: 224px;
+  padding: 0 20px;
+  background-color: white;
+  transform: translate(-20px, 34px);
+
+  @include tablet {
+    max-width: 600px;
+    padding: 0 40px;
+    font-size: 36px;
+    line-height: 36px;
+    transform: translate(-40px, 10px);
+  }
+}
+
+.owner-contacts__label {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  @include titletext(16px,18px);
+
+  @include tablet {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    flex: 1 1 45%;
+  }
+}
+
+.owner-contacts__label:first-child {
+  @include desktop {
+    margin-right: 80px;
+  }
+}
+
+.owner-contacts__input {
+  flex-grow: 1;
+  margin-left: 12px;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  @include input;
+
+  @include tablet {
+    margin-left: 20px;
+  }
+}
+
+.owner-contacts__input:active::placeholder,
+.owner-contacts__input:focus::placeholder {
+  opacity: 0;
+}
+
+.owner-contacts__icon {
+  position: absolute;
+  fill: var(--color-copy);
+
+  &--mail {
+    top: 18px;
+    right: 15px;
+
+    @include tablet {
+      top: 20px;
+      right: 18px;
+    }
+  }
+
+  &--phone {
+    top: 14px;
+    right: 12px;
+
+    @include tablet {
+      top: 17px;
+      right: 18px;
+    }
+  }
+}
+
+.owner-contacts__input:focus + .owner-contacts__icon,
+.owner-contacts__input:invalid:focus + .owner-contacts__icon {
+  fill: var(--color-primary);
+}
+
+.owner-contacts__input:not(:placeholder-shown):invalid + .owner-contacts__icon {
+  fill: var(--color-error);
+}

@@ -1,0 +1,49 @@
+.copyright {
+  width: 280px;
+  margin-top: 20px;
+
+  @include tablet {
+    width: 165px;
+    margin: 0;
+    padding-top: 15px;
+  }
+
+  @include desktop {
+    padding-top: 2px;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-copy);
+  text-decoration: none;
+  @include copytext(16px,16px);
+}
+
+.copyright__logo {
+  padding-top: 2px;
+  fill: var(--color-copy);
+
+  @include tablet {
+    margin-left: 20px;
+  }
+}
+
+.copyright__link:hover .copyright__logo {
+  fill: var(--color-primary);
+}
+
+.copyright__link:active .copyright__logo {
+  opacity: 0.5;
+  fill: var(--color-primary);
+}
+
+.copyright__link:hover {
+  opacity: 0.8;
+}
+
+.copyright__link:active {
+  opacity: 0.6;
+}

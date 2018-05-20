@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  color: var(--color-black);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  @include visually-hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

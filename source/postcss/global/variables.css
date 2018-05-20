@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #68b738;
+  --color-primary-dark: #5eaa2f;
+
+  --color-background: #f2f2f2;
+  --color-line: #cdcdcd;
+  --color-menuline: #e6e6e6;
+  --color-slider-darker: #eaeaea;
+
+  --color-black: #111111;
+  --color-copy: #444444;
+  --color-transparent: rgba(1, 1, 1, 0);
+
+  --color-error: #ff8282;
+
+  --padding-mobile: calc(50% - 140px);
+  --padding-tablet: calc(50% - 354px);
+  --padding-desktop: calc(50% - 610px);
+  --padding-tablet-form: calc(50% - 315px);
+
+}
+
+@custom-media --mobile-width (min-width: 320px);
+@custom-media --tablet-width (min-width: 768px);
+@custom-media --desktop-width-max (max-width: 1300px);
+@custom-media --desktop-width (min-width: 1300px);
+@custom-media --retina (min-resolution: 144dpi, 1.5dppx);

@@ -1,0 +1,51 @@
+.form-main__form {
+  padding-top: 39px;
+  padding-bottom: 31px;
+
+  @include tablet {
+    padding-top: 66px;
+    padding-bottom: 85px;
+  }
+}
+
+.form-main__heading {
+  margin-top: 16px;
+  margin-bottom: 25px;
+  padding-left: var(--padding-mobile);
+  @include titletext(36px, 60px);
+
+  @include tablet {
+    margin-top: 54px;
+    margin-bottom: 55px;
+    padding-left: var(--padding-tablet);
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include desktop {
+    margin-top: 19px;
+    margin-bottom: 55px;
+    padding-left: var(--padding-desktop);
+  }
+}
+
+.form-main__subline {
+  padding-right: calc(var(--padding-mobile) + 40px);
+  padding-left: var(--padding-mobile);
+  text-transform: uppercase;
+  @include titletext(14px,18px);
+
+  @include tablet {
+    max-width: 54%;
+    padding-right: calc(var(--padding-tablet) - 10px);
+    padding-left: var(--padding-tablet-form);
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    max-width: 440px;
+    padding-right: 0;
+    padding-left: var(--padding-desktop);
+  }
+}
