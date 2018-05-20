@@ -50,8 +50,8 @@
 .hero__heading {
   margin-bottom: 25px;
   font-weight: 400;
-  color: inherit;
   @include titletext(36px, 36px);
+  color: inherit;
 
   @include tablet {
     margin-bottom: 41px;
@@ -66,9 +66,9 @@
 
 .hero__subline {
   margin-bottom: 300px;
-  color: inherit;
   text-transform: uppercase;
   @include titletext(14px, 14px);
+  color: inherit;
 
   @include tablet {
     margin-bottom: 45px;
