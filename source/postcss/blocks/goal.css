@@ -1,6 +1,7 @@
 .goal {
   padding-top: 26px;
   border: none;
+  padding-bottom: 1px;
   border-bottom: 1px solid var(--color-menuline);
 
   @include tablet {
@@ -30,7 +31,7 @@
 .goal__label {
   position: relative;
   display: block;
-  margin-bottom: 33px;
+  margin-bottom: 25px;
   padding-left: 45px;
   text-transform: uppercase;
   cursor: pointer;

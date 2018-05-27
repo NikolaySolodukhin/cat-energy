@@ -35,14 +35,17 @@
   width: auto;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 var(--padding-mobile);
+  padding-left: var(--padding-mobile);
+  padding-right: var(--padding-mobile);
 
   @include tablet {
-    padding: 0 var(--padding-tablet);
+    padding-left: var(--padding-tablet);
+    padding-right: var(--padding-tablet);
   }
 
   @include desktop {
-    padding: 0 var(--padding-desktop);
+    padding-left: var(--padding-desktop);
+    padding-right: var(--padding-desktop);
   }
 }
 

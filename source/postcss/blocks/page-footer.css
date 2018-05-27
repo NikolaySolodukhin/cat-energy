@@ -1,6 +1,6 @@
 .page-footer {
   padding-top: 37px;
-  padding-bottom: 40px;
+  padding-bottom: 22px;
   background-color: var(--color-background);
 
   @include tablet {

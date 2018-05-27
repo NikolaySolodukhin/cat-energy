@@ -5,7 +5,7 @@
 }
 
 .comment__title {
-  margin-bottom: 33px;
+  margin-bottom: 32px;
   padding-left: var(--padding-mobile);
   border-bottom: 2px solid var(--color-primary);
   transform: translateY(-10px);

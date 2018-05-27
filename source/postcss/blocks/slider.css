@@ -36,8 +36,6 @@
 }
 
 .slider__image {
-  position: absolute;
-
   @include tablet {
     width: 50%;
     height: 510px;
@@ -73,9 +71,6 @@
 }
 
 .slider__cat-pic {
-  width: 320px;
-  height: 240px;
-
   @include tablet {
     position: absolute;
     top: 0;

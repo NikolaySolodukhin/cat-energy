@@ -33,9 +33,6 @@
 }
 
 .page-header__logo-pic {
-  width: 190px;
-  height: 42px;
-
   @include tablet {
     width: 173px;
     height: 60px;

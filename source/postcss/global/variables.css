@@ -13,7 +13,7 @@
 
   --color-error: #ff8282;
 
-  --padding-mobile: calc(50% - 140px);
+  --padding-mobile: 20px;
   --padding-tablet: calc(50% - 354px);
   --padding-desktop: calc(50% - 610px);
   --padding-tablet-form: calc(50% - 315px);
