@@ -23,6 +23,7 @@
 
 .goal__content-center {
   @include content-center;
+
   @include desktop {
     padding: 0;
   }
@@ -35,11 +36,13 @@
   padding-left: 45px;
   text-transform: uppercase;
   cursor: pointer;
+
   @include titletext(16px,18px);
 
   @include tablet {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 33px;
   }
 
   &:active,

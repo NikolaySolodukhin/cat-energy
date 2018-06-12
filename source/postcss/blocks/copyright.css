@@ -5,11 +5,11 @@
   @include tablet {
     width: 165px;
     margin: 0;
-    padding-top: 15px;
+    padding-top: 17px;
   }
 
   @include desktop {
-    padding-top: 2px;
+    padding-top: 7px;
   }
 }
 
@@ -19,6 +19,7 @@
   align-items: center;
   color: var(--color-copy);
   text-decoration: none;
+
   @include copytext(16px,16px);
 }
 

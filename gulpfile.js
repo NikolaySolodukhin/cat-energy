@@ -168,7 +168,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('htmlminify', function () {
-  return gulp.src('build/*.html')
+  return gulp.src('source/*.html')
     .pipe(
       plugins.revReplace({
         manifest: gulp.src('build/manifest/manifest.json')
@@ -236,47 +236,11 @@ gulp.task('build', function (fn) {
   plugins.runSequence(
     'clean', ['symbols'],
     'copy', ['style', 'scripts'],
-    ['critical'],
     'htmlminify',
     fn
   );
 });
 
-gulp.task("critical", function () {
-  return gulp
-    .src("source/*.html")
-    .pipe(
-      plugins.critical.generate({
-        base: "./",
-        inline: true,
-        css: "build/css/style.css",
-        minify: true,
-        ignore: ["@font-face", /url\(/],
-        dimensions: [
-          {
-            height: 812,
-            width: 375
-          },
-          {
-            height: 1024,
-            width: 768
-          },
-          {
-            height: 768,
-            width: 1024
-          },
-          {
-            height: 900,
-            width: 1200
-          }
-        ]
-      })
-    )
-    .on("error", function (err) {
-      gutil.log(gutil.colors.red(err.message));
-    })
-    .pipe(gulp.dest("build/"));
-});
 
 gulp.task('demo', function () {
   plugins.browserSync.init({

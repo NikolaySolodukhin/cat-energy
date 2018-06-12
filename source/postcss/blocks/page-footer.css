@@ -4,11 +4,12 @@
   background-color: var(--color-background);
 
   @include tablet {
-    padding: 34px 30px;
+    padding: 43px 30px;
+    padding-bottom: 56px;
   }
 
   @include desktop {
-    padding: 40px 30px;
+    padding: 52px 30px;
   }
 }
 
@@ -16,16 +17,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   @include content-center;
 
   @include tablet {
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 0;
   }
 
   @include desktop {
     @include content-center;
+    align-items: center;
   }
 }
 
@@ -38,6 +41,6 @@
   @include tablet {
     width: 132px;
     margin: 0;
-    padding: 0;
+    padding-top: 6px;
   }
 }

@@ -5,7 +5,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     @include content-center;
+    margin-bottom: 13px;
   }
 }
 
@@ -17,6 +19,7 @@
 
   @include desktop {
     margin-right: 82px;
+    margin-bottom: 28px;
   }
 }
 
@@ -26,7 +29,7 @@
   }
 
   @include desktop {
-    margin-right: 76px;
+    margin-right: 79px;
   }
 }
 

@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     min-width: 441px;
     max-width: 500px;
-    padding-top: 2px;
+    padding-top: 3px;
     padding-right: 0;
     border: none;
   }
@@ -45,6 +45,7 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
+
   @include titletext(20px,20px);
 
   @include tablet {
@@ -58,6 +59,7 @@
     font-size: 20px;
     line-height: 24px;
     color: inherit;
+    padding-bottom: 5px;
   }
 }
 

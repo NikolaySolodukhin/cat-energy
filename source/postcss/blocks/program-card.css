@@ -7,14 +7,14 @@
 
   @include tablet {
     position: relative;
-    margin-bottom: 28px;
-    padding: 79px 280px 63px 52px;
+    margin-bottom: 30px;
+    padding: 79px 280px 60px 52px;
   }
 
   @include desktop {
     max-width: 570px;
     margin-bottom: 0;
-    padding: 72px 52px 65px;
+    padding: 72px 52px 63px;
   }
 }
 
@@ -38,7 +38,7 @@
   }
 
   @include desktop {
-    margin-bottom: 74px;
+    margin-bottom: 78px;
     padding-left: 162px;
     font-size: 36px;
     line-height: 37px;
@@ -55,15 +55,15 @@
     border-radius: 50%;
 
     @include tablet {
-      top: 14px;
-      left: 395px;
+      top: 13px;
+      left: 394px;
       width: 200px;
       height: 200px;
     }
 
     @include desktop {
-      top: -30px;
-      left: -3px;
+      top: -25px;
+      left: 0;
       width: 100px;
       height: 100px;
     }
@@ -85,15 +85,15 @@
   background-image: url("../img/icon-cat-slim.svg");
 
   @include tablet {
-    top: 6px;
+    top: 2px;
     left: 424px;
     width: 140px;
     height: 193px;
   }
 
   @include desktop {
-    top: -35px;
-    left: 13px;
+    top: -31px;
+    left: 14px;
     width: 70px;
     height: 97px;
   }
@@ -107,15 +107,15 @@
   background-image: url("../img/icon-cat-pro.svg");
 
   @include tablet {
-    top: 60px;
+    top: 56px;
     left: 360px;
     width: 268px;
     height: 112px;
   }
 
   @include desktop {
-    top: -8px;
-    left: -20px;
+    top: -4px;
+    left: -18px;
     width: 134px;
     height: 56px;
   }
@@ -123,6 +123,11 @@
 
 .program-card__title--pro::before {
   top: -6px;
+
+  @include tablet {
+    top: 12px;
+    left: 396px;
+  }
 }
 
 .program-card__description {

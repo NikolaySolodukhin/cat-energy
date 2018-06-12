@@ -4,7 +4,7 @@
 
   @include tablet {
     padding-top: 66px;
-    padding-bottom: 85px;
+    padding-bottom: 81px;
   }
 }
 
@@ -12,10 +12,11 @@
   margin-top: 16px;
   margin-bottom: 25px;
   padding-left: var(--padding-mobile);
+
   @include titletext(36px, 60px);
 
   @include tablet {
-    margin-top: 54px;
+    margin-top: 51px;
     margin-bottom: 55px;
     padding-left: var(--padding-tablet);
     font-size: 60px;
@@ -23,7 +24,7 @@
   }
 
   @include desktop {
-    margin-top: 19px;
+    margin-top: 9px;
     margin-bottom: 55px;
     padding-left: var(--padding-desktop);
   }
@@ -33,6 +34,7 @@
   padding-right: calc(var(--padding-mobile) + 40px);
   padding-left: var(--padding-mobile);
   text-transform: uppercase;
+
   @include titletext(14px,18px);
 
   @include tablet {

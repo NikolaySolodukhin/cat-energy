@@ -23,12 +23,17 @@
     content: "";
     position: absolute;
     top: 0;
-    left: calc(50% + 30px);
+    right: 0;
     z-index: -1;
-    width: calc(50% - 30px);
-    height: 100px;
-    height: 700px;
+    width: calc(50% - 40px);
     background-color: var(--color-primary-dark);
+    min-height: 695px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (--retina) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 

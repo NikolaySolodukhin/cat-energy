@@ -2,19 +2,20 @@
   margin-top: 17px;
   margin-bottom: 27px;
   padding-left: var(--padding-mobile);
+
   @include titletext(36px, 60px);
 
   @include tablet {
-    margin-top: 54px;
-    margin-bottom: 82px;
+    margin-top: 51px;
+    margin-bottom: 83px;
     padding-left: var(--padding-tablet);
     font-size: 60px;
     line-height: 60px;
   }
 
   @include desktop {
-    margin-top: 18px;
     padding-left: var(--padding-desktop);
+    margin-top: 9px;
   }
 }
 
@@ -29,5 +30,15 @@
     margin-bottom: 20px;
 
     @include content-center;
+  }
+}
+
+.catalog-main__supplies {
+  @include tablet {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    padding-top: 9px;
   }
 }

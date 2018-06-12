@@ -1,6 +1,10 @@
 .additional {
   margin-bottom: 17px;
   border: none;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
 }
 
 .additional__title {
@@ -8,11 +12,12 @@
   padding-left: var(--padding-mobile);
   border-bottom: 2px solid var(--color-primary);
   transform: translateY(-13px);
+
   @include titletext(24px,24px);
 
   @include tablet {
     margin-top: 36px;
-    margin-bottom: 64px;
+    margin-bottom: 62px;
     padding-left: var(--padding-tablet-form);
     transform: translateY(-14px);
   }
@@ -63,6 +68,7 @@
   padding-left: 45px;
   text-transform: uppercase;
   cursor: pointer;
+
   @include titletext(16px,18px);
 
   @include tablet {
@@ -85,7 +91,7 @@
 
 .additional__label:nth-of-type(2n-1) {
   @include tablet {
-    margin-right: 60px;
+    margin-right: 91px;
   }
 }
 

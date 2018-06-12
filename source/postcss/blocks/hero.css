@@ -2,40 +2,39 @@
   padding-bottom: 20px;
   text-align: center;
   color: white;
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position-x: 50%, 50%;
-  background-position-y: 72%, 0;
+  position: relative;
 
-  @media (--retina) {
-    background: url("../img/index-can-mobile@2x.png") 50% 72% no-repeat, url("../img/index-background-mobile@2x.jpg") 50% 0 no-repeat;
-    background-size: 280px 271px, 320px 306px, 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: 305px;
+    background-color: var(--color-primary);
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (--retina) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
+    @include tablet {
+      content: none;
+    }
   }
 
   @include tablet {
-    padding-top: 54px;
-    padding-bottom: 532px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 48% 100%;
-    background-size: 709px 609px;
-
-    @media (--retina) {
-      background-image: url("../img/index-can-tablet@2x.jpg");
-    }
+    min-height: 858px;
+    padding-bottom: 0;
+    margin-bottom: 3px;
   }
 
   @include desktop {
-    margin-top: -170px;
-    padding-top: 222px;
-    padding-bottom: 275px;
-    background: url("../img/index-can-desktop@1x.png") 560px 140px no-repeat, url("../img/index-background-desktop@1x.jpg") 100% 0 no-repeat;
-    background-size: 552px 499px, calc(var(--padding-desktop) + 570px) 700px, 100% 90%;
-
-    @media (--retina) {
-      background: url("../img/index-can-desktop@2x.png") 560px 140px no-repeat, url("../img/index-background-desktop@2x.jpg") 100% 0 no-repeat;
-      background-size: 552px 499px, calc(var(--padding-desktop) + 570px) 700px, 100% 90%;
-    }
+    min-height: 596px;
+    margin-bottom: 0;
   }
 }
 
@@ -43,19 +42,19 @@
   @include content-center;
 
   @include tablet {
-    padding-left: calc(50% - 265px);
     padding-right: calc(50% - 265px);
+    padding-left: calc(50% - 265px);
   }
 
   @include desktop {
-    padding-left: calc(50% - 531px);
     padding-right: calc(50% - 531px);
+    padding-left: calc(50% - 531px);
   }
 }
 
 .hero__heading {
-  padding-top: 28px;
   margin-bottom: 25px;
+  padding-top: 28px;
   font-weight: 400;
 
   @include titletext(36px, 36px);
@@ -64,12 +63,14 @@
   @include tablet {
     margin-bottom: 41px;
     text-align: left;
+    padding-top: 51px;
 
     @include titletext(60px, 60px);
   }
 
   @include desktop {
     max-width: 420px;
+    padding-top: 42px;
   }
 }
 
@@ -93,15 +94,36 @@
 }
 
 .hero__btn {
-  font-size: 14px;
-  line-height: 18px;
   padding-top: 12px;
   padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
 
   @include tablet {
     width: 245px;
     padding: 15px;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+
+.hero__image {
+  position: absolute;
+  right: 0;
+  bottom: 62px;
+  left: 0;
+  margin: auto;
+
+  @include tablet {
+    bottom: -5px;
+    z-index: -1;
+  }
+
+  @include desktop {
+    left: auto;
+    right: 328px;
+    bottom: auto;
+    top: -38px;
   }
 }

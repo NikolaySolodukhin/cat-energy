@@ -1,22 +1,17 @@
-.supplies {
-  @include tablet {
-    padding-top: 12px;
-  }
-
-  @include desktop {
-    padding-top: 24px;
-  }
-}
-
 .supplies__heading {
   margin-bottom: 30px;
   padding-left: var(--padding-mobile);
   border-bottom: 2px solid var(--color-primary);
-  transform: translateY(-12px);
+  transform: translateY(-15px);
 
   @include tablet {
-    margin-bottom: 75px;
+    margin-bottom: 76px;
     padding-left: var(--padding-tablet);
+  }
+
+  @include desktop {
+    margin-bottom: 73px;
+    transform: translateY(-19px);
   }
 }
 
@@ -26,18 +21,19 @@
   padding-left: 20px;
   background-color: white;
   transform: translate(-21px, 10px);
+
   @include titletext(24px,24px);
 
   @include tablet {
     padding: 0 40px;
     font-size: 36px;
     line-height: 36px;
-    transform: translate(-5px, 10px);
+    transform: translate(-3px, 13px);
   }
 
   @include desktop {
     padding: 0 40px;
-    transform: translate(-295px, 10px);
+    transform: translate(-295px, 13px);
   }
 }
 
@@ -70,13 +66,18 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    padding: 27px 40px 24px;
+    padding: 27px 37px 27px;
+    border-left: 1px solid var(--color-line);
+    border-right: 1px solid var(--color-line);
   }
 
   @include desktop {
     flex-wrap: nowrap;
     align-items: center;
-    padding: 13px 0;
+    padding: 16px 0;
+    padding-top: 15px;
+    border-left: none;
+    border-right: none;
   }
 
   &:last-child {
@@ -87,6 +88,7 @@
 .supplies__title {
   margin-bottom: 14px;
   text-transform: uppercase;
+
   @include titletext(16px,16px);
 
   @include tablet {
@@ -109,6 +111,7 @@
     display: inline-block;
     margin-right: 0;
     margin-left: auto;
+    padding-top: 4px;
   }
 
   @include desktop {
@@ -151,7 +154,7 @@
   padding-bottom: 10px;
 
   @include tablet {
-    margin-top: 25px;
+    margin-top: 24px;
   }
 
   @include desktop {

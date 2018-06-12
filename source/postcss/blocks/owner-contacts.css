@@ -9,6 +9,7 @@
 
 .owner-contacts__content-center {
   padding-top: 30px;
+
   @include content-center;
 
   @include tablet {
@@ -26,13 +27,14 @@
   padding-left: var(--padding-mobile);
   border-bottom: 2px solid var(--color-primary);
   transform: translateY(-36px);
+
   @include titletext(24px, 24px);
 
   @include tablet {
     margin-top: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 71px;
     padding-left: var(--padding-tablet-form);
-    transform: translateY(-14px);
+    transform: translateY(-17px);
   }
 
   @include desktop {
@@ -53,7 +55,7 @@
     padding: 0 40px;
     font-size: 36px;
     line-height: 36px;
-    transform: translate(-40px, 10px);
+    transform: translate(-40px, 14px);
   }
 }
 
@@ -63,6 +65,7 @@
   align-items: baseline;
   margin-bottom: 14px;
   text-transform: uppercase;
+
   @include titletext(16px,18px);
 
   @include tablet {
@@ -89,10 +92,11 @@
   font-family: inherit;
   color: inherit;
   text-transform: uppercase;
+
   @include input;
 
   @include tablet {
-    margin-left: 20px;
+    margin-left: 21px;
   }
 }
 

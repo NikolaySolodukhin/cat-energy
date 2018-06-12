@@ -12,7 +12,7 @@
   }
 
   @include tablet {
-    margin: 72px var(--padding-tablet) 79px;
+    margin: 69px var(--padding-tablet) 76px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (--retina) {
@@ -23,7 +23,7 @@
   @include desktop {
     max-width: 245px;
     margin: 0 0 65px;
-    padding: 38px 40px 50px;
+    padding: 38px 40px 46px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (--retina) {
@@ -40,8 +40,8 @@
   fill: white;
 
   @include tablet {
-    top: 62px;
-    left: 90px;
+    top: 65px;
+    left: 91px;
     transform: translateX(0);
   }
 
@@ -52,11 +52,12 @@
 
 .present__text {
   padding: 190px 58px 46px;
+
   @include copytext(16px,18px);
   color: white;
 
   @include tablet {
-    padding: 70px 122px 70px 420px;
+    padding: 74px 122px 72px 423px;
     text-align: left;
   }
 

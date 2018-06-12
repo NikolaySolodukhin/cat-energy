@@ -27,10 +27,11 @@
 
 .example__heading {
   margin-bottom: 23px;
+
   @include titletext(36px,60px);
 
   @include tablet {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -43,10 +44,11 @@
 .example__text {
   margin-bottom: 25px;
   padding-right: 1px;
+
   @include copytext(14px,18px);
 
   @include tablet {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     padding-right: 10px;
     font-size: 16px;
     line-height: 24px;
@@ -76,13 +78,14 @@
   display: block;
   text-align: center;
   text-transform: uppercase;
+
   @include titletext(14px,20px);
 
   @include tablet {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-top: 10px;
+    padding-top: 11px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -96,6 +99,10 @@
 
 .example__rub {
   margin-top: 12px;
+
+  @include tablet {
+    margin-top: 10px;
+  }
 
   @include desktop {
     margin-right: 40px;
