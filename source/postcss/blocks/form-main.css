@@ -46,8 +46,9 @@
   }
 
   @include desktop {
-    max-width: 440px;
+    width: 440px;
     padding-right: 0;
-    padding-left: var(--padding-desktop);
+    margin-left: var(--padding-desktop);
+    padding-left: 0;
   }
 }

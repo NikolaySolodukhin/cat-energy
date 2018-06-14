@@ -1,8 +1,19 @@
 .hero {
+  position: relative;
   padding-bottom: 20px;
   text-align: center;
   color: white;
-  position: relative;
+
+  @include tablet {
+    min-height: 858px;
+    margin-bottom: 3px;
+    padding-bottom: 0;
+  }
+
+  @include desktop {
+    min-height: 596px;
+    margin-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -25,17 +36,6 @@
       content: none;
     }
   }
-
-  @include tablet {
-    min-height: 858px;
-    padding-bottom: 0;
-    margin-bottom: 3px;
-  }
-
-  @include desktop {
-    min-height: 596px;
-    margin-bottom: 0;
-  }
 }
 
 .hero__content-center {
@@ -56,14 +56,14 @@
   margin-bottom: 25px;
   padding-top: 28px;
   font-weight: 400;
+  color: inherit;
 
   @include titletext(36px, 36px);
-  color: inherit;
 
   @include tablet {
     margin-bottom: 41px;
-    text-align: left;
     padding-top: 51px;
+    text-align: left;
 
     @include titletext(60px, 60px);
   }
@@ -76,10 +76,10 @@
 
 .hero__subline {
   margin-bottom: 300px;
+  color: inherit;
   text-transform: uppercase;
 
   @include titletext(14px, 14px);
-  color: inherit;
 
   @include tablet {
     margin-bottom: 45px;
@@ -121,9 +121,9 @@
   }
 
   @include desktop {
-    left: auto;
-    right: 328px;
-    bottom: auto;
     top: -38px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-40%);
   }
 }
