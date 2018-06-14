@@ -39,7 +39,7 @@
   @include desktop {
     position: absolute;
     top: 95px;
-    left: calc((100% - 1220px) / 2);
+    left: calc(50% - 610px);
     z-index: 2;
     min-width: 570px;
     padding: 65px 75px 60px;
