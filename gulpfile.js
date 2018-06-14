@@ -15,7 +15,6 @@ var plugins = require('gulp-load-plugins')({
     'browser-sync',
     'run-sequence',
     'stream-combiner2',
-    'critical',
     'posthtml-include'
   ]
 });
