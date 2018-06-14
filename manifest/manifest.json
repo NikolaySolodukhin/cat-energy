@@ -162,8 +162,11 @@
   "img/logo-mobile-header.svg": "img/logo-mobile-header-98704a9a7a.svg",
   "img/logo-mobile.svg": "img/logo-mobile-e647d3807d.svg",
   "img/logo-tablet.svg": "img/logo-tablet-3ca36a6761.svg",
+  "img/map-desktop.jpg": "img/map-desktop-8645eb3a22.jpg",
   "img/map-pin.png": "img/map-pin-05b0eee763.png",
   "img/map-pin.webp": "img/map-pin-6a63cb8cb5.webp",
+  "img/map-tablet.jpg": "img/map-tablet-57d34ad700.jpg",
+  "img/map.jpg": "img/map-664073ff58.jpg",
   "img/rice-small-desktop@1x.png": "img/rice-small-desktop@1x-9f3b07d15c.png",
   "img/rice-small-desktop@1x.webp": "img/rice-small-desktop@1x-fc784b0645.webp",
   "img/rice-small-desktop@2x.png": "img/rice-small-desktop@2x-b7830b7a67.png",
@@ -178,5 +181,5 @@
   "img/rice-small-tablet@2x.webp": "img/rice-small-tablet@2x-25b17b01f4.webp",
   "main.js": "main-076a19bc16.js",
   "sprite.svg": "sprite-e6ceea15fc.svg",
-  "style.css": "style-b066166da1.css"
+  "style.css": "style-30f13cdeb4.css"
 }
