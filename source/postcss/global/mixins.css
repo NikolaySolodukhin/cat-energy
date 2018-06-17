@@ -20,7 +20,6 @@
   font-weight: 400;
   font-size: $size;
   line-height: $line;
-  color: var(--color-black);
 }
 
 @mixin copytext($size, $line) {
@@ -35,17 +34,17 @@
   width: auto;
   margin-right: auto;
   margin-left: auto;
-  padding-left: var(--padding-mobile);
   padding-right: var(--padding-mobile);
+  padding-left: var(--padding-mobile);
 
   @include tablet {
-    padding-left: var(--padding-tablet);
     padding-right: var(--padding-tablet);
+    padding-left: var(--padding-tablet);
   }
 
   @include desktop {
-    padding-left: var(--padding-desktop);
     padding-right: var(--padding-desktop);
+    padding-left: var(--padding-desktop);
   }
 }
 

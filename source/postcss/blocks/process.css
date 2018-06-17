@@ -20,6 +20,7 @@
 
 .process__heading {
   @include titletext(36px,60px);
+  color: var(--color-black);
 
   @include tablet {
     margin-bottom: 76px;

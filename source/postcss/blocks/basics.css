@@ -28,7 +28,9 @@
   display: flex;
   align-items: baseline;
   margin-bottom: 14px;
+  color: var(--color-black);
   text-transform: uppercase;
+
   @include titletext(16px,18px);
 
   @include tablet {
@@ -55,6 +57,7 @@
   font-family: inherit;
   color: inherit;
   text-transform: uppercase;
+
   @include input;
 
   @include tablet {

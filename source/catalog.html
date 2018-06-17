@@ -10,7 +10,55 @@
   <link rel="preload" as="font" type="font/woff2" href="fonts/oswaldmedium.woff2" crossorigin="anonymous">
   <link rel="preload" as="font" type="font/woff2" href="fonts/oswaldregular.woff2" crossorigin="anonymous">
   <link rel="preload" href="js/main.js" as="script">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+  </noscript>
+  <script>
+    ! function (t) {
+      "use strict";
+      t.loadCSS || (t.loadCSS = function () {});
+      var e = loadCSS.relpreload = {};
+      if (e.support = function () {
+          var e;
+          try {
+            e = t.document.createElement("link").relList.supports("preload")
+          } catch (t) {
+            e = !1
+          }
+          return function () {
+            return e
+          }
+        }(), e.bindMediaToggle = function (t) {
+          var e = t.media || "all";
+
+          function a() {
+            t.media = e
+          }
+          t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(
+            function () {
+              t.rel = "stylesheet", t.media = "only x"
+            }), setTimeout(a, 3e3)
+        }, e.poly = function () {
+          if (!e.support())
+            for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) {
+              var o = a[n];
+              "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute(
+                "data-loadcss", !0), e.bindMediaToggle(o))
+            }
+        }, !e.support()) {
+        e.poly();
+        var a = t.setInterval(e.poly, 500);
+        t.addEventListener ? t.addEventListener("load", function () {
+          e.poly(), t.clearInterval(a)
+        }) : t.attachEvent && t.attachEvent("onload", function () {
+          e.poly(), t.clearInterval(a)
+        })
+      }
+      "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS
+    }("undefined" != typeof global ? global : this);
+
+  </script>
   <title>HTML Academy: Кэт энерджи Каталог продукции</title>
 </head>
 
@@ -65,21 +113,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br> PRO 500 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">500 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Курица</td>
             </tr>
             <tr>
-              <td>Цена</td>
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">700 Р.</td>
             </tr>
           </table>
@@ -101,21 +149,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>PRO 1000 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
-              <td class="product-card__td product-card__td--right" >1000 г</td>
+            <tr class="">
+              <td class="">Объем</td>
+              <td class="product-card__td product-card__td--right">1000 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Курица</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">1000 Р.</td>
             </tr>
           </table>
@@ -137,21 +185,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>PRO 500 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">500 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Рыба</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">700 Р.</td>
             </tr>
           </table>
@@ -173,21 +221,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>PRO 1000 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">1000 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Рыба</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">1000 Р.</td>
             </tr>
           </table>
@@ -209,21 +257,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>Slim 500 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">500 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Гречка</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">400 Р.</td>
             </tr>
           </table>
@@ -245,21 +293,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>Slim 1000 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">1000 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Гречка</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">700 Р.</td>
             </tr>
           </table>
@@ -281,21 +329,21 @@
         </a>
 
         <div class="product-card__text-wrapper">
-          <h3>
-            <a href="catalog.html/product" class="product-card__title">Cat Energy
+          <h3 class="product-card__title">
+            <a href="catalog.html/product" class="product-card__link">Cat Energy
               <br>Slim 500 г</a>
           </h3>
           <table class="product-card__info">
-            <tr>
-              <td>Объем</td>
+            <tr class="">
+              <td class="">Объем</td>
               <td class="product-card__td product-card__td--right">500 г</td>
             </tr>
-            <tr>
-              <td>Вкус</td>
+            <tr class="">
+              <td class="">Вкус</td>
               <td class="product-card__td product-card__td--right">Рис</td>
             </tr>
-            <tr>
-              <td>Цена</td>
+            <tr class="">
+              <td class="">Цена</td>
               <td class="product-card__td product-card__td--right">500 Р.</td>
             </tr>
           </table>
@@ -358,8 +406,6 @@
         </div>
       </div>
     </div>
-
-
 
     <section class="contacts contacts--catalog">
       <div class="contacts__content-center">

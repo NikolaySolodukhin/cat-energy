@@ -17,14 +17,15 @@
   @include desktop {
     max-width: 245px;
     margin-top: 82px;
-    padding: 0 38px;
     margin-bottom: 58px;
+    padding: 0 38px;
   }
 }
 
 .show-more__title {
   position: relative;
   margin-bottom: 7px;
+  color: var(--color-black);
   text-transform: uppercase;
 
   @include titletext(16px,20px);

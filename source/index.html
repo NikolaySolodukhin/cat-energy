@@ -10,7 +10,55 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="js/main.js" as="script">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+  </noscript>
+  <script>
+    ! function (t) {
+      "use strict";
+      t.loadCSS || (t.loadCSS = function () {});
+      var e = loadCSS.relpreload = {};
+      if (e.support = function () {
+          var e;
+          try {
+            e = t.document.createElement("link").relList.supports("preload")
+          } catch (t) {
+            e = !1
+          }
+          return function () {
+            return e
+          }
+        }(), e.bindMediaToggle = function (t) {
+          var e = t.media || "all";
+
+          function a() {
+            t.media = e
+          }
+          t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(
+            function () {
+              t.rel = "stylesheet", t.media = "only x"
+            }), setTimeout(a, 3e3)
+        }, e.poly = function () {
+          if (!e.support())
+            for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) {
+              var o = a[n];
+              "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute(
+                "data-loadcss", !0), e.bindMediaToggle(o))
+            }
+        }, !e.support()) {
+        e.poly();
+        var a = t.setInterval(e.poly, 500);
+        t.addEventListener ? t.addEventListener("load", function () {
+          e.poly(), t.clearInterval(a)
+        }) : t.attachEvent && t.attachEvent("onload", function () {
+          e.poly(), t.clearInterval(a)
+        })
+      }
+      "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS
+    }("undefined" != typeof global ? global : this);
+
+  </script>
   <title>HTML Academy: Кэт энерджи Главная</title>
 </head>
 
@@ -53,14 +101,14 @@
         <h1 class="hero__heading">Функциональное питание для котов</h1>
         <p class="hero__subline">Занялся собой? Займись котом!</p>
         <a href="form.html" class="hero__btn btn btn--green">Подобрать программу</a>
-      <picture class="hero__image">
-        <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x">
-        <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
-        <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat energy">
-      </picture>
+        <picture class="hero__image">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+          <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat energy">
+        </picture>
       </div>
     </section>
 
@@ -136,18 +184,6 @@
           <input type="radio" class="visually-hidden slider__before" name="slider-toggle" id="before" value="before" checked>
           <input type="radio" class="visually-hidden slider__after" name="slider-toggle" id="after" value="after">
           <div class="slider__images">
-            <div class="slider__image slider__image--before">
-              <picture class="slider__image-wrapper">
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="slider__cat-pic slider__cat-pic--before" src="img/before-mobile@1x.png" alt="Fat cat" width="320" height="240"
-                  srcset="img/before-mobile@2x.png 2x">
-              </picture>
-            </div>
             <div class="slider__image slider__image--after">
               <picture class="slider__image-wrapper">
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
@@ -160,10 +196,23 @@
                   srcset="img/after-mobile@2x.png 2x">
               </picture>
             </div>
+            <div class="slider__image slider__image--before">
+              <picture class="slider__image-wrapper">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__cat-pic slider__cat-pic--before" src="img/before-mobile@1x.png" alt="Fat cat" width="320" height="240"
+                  srcset="img/before-mobile@2x.png 2x">
+              </picture>
+            </div>
           </div>
           <div class="slider__controls">
             <label class="slider__label slider__label--before" for="before">Было</label>
             <div class="slider__scale">
+              <div class="slider__scale-value"></div>
               <div class="slider__indicator">
                 <span class="visually-hidden">Переключатель слайдера</span>
               </div>

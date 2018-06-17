@@ -18,8 +18,9 @@
   position: relative;
   width: 320px;
   height: 240px;
+  margin-right: auto;
   margin-bottom: 33px;
-  margin-left: -20px;
+  margin-left: auto;
 
   @include tablet {
     width: 680px;
@@ -36,53 +37,15 @@
 
 .slider__image {
   @include tablet {
-    width: 50%;
     height: 510px;
-    overflow: hidden;
-    visibility: visible;
-
-    &--before {
-      left: 0;
-      width: calc(50% - 10px);
-    }
-
-    &--after {
-      right: 0;
-      width: calc(50% + 10px);
-    }
-  }
-
-  @include desktop {
-    &--before {
-      width: calc(50% + 22px);
-    }
-
-    &--after {
-      right: -6px;
-      width: calc(50% - 16px);
-    }
-  }
-
-  &--after {
-    visibility: hidden;
   }
 }
 
 .slider__cat-pic {
   @include tablet {
-    position: absolute;
-    top: 0;
     width: 680px;
     max-width: none;
     height: 510px;
-
-    &--before {
-      left: 0;
-    }
-
-    &--after {
-      right: 0;
-    }
   }
 
   @include desktop {
@@ -103,6 +66,7 @@
 
 .slider__label {
   margin: 0 20px;
+  color: var(--color-black);
   text-transform: uppercase;
   cursor: pointer;
 
@@ -152,6 +116,7 @@
 }
 
 .slider__scale {
+  position: relative;
   display: flex;
   align-items: center;
   width: 84px;
@@ -170,16 +135,18 @@
 }
 
 .slider__indicator {
-  width: 35px;
-  height: 6px;
-  background-color: var(--color-primary);
-  border-radius: 3px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
 
   @include tablet {
+    top: -13px;
     width: 34px;
     height: 34px;
-    margin-right: auto;
-    margin-left: auto;
+    background-color: var(--color-primary);
     background-image: radial-gradient(var(--color-primary) 0, var(--color-primary) 4px, white 5px, white 100%);
     border: 1px solid var(--color-menuline);
     border-radius: 50%;
@@ -195,5 +162,22 @@
       border-color: var(--color-primary);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+.slider__scale-value {
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 1px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  transition: width;
+
+  @include tablet {
+    top: 0;
+    left: 0;
+    height: 7px;
   }
 }

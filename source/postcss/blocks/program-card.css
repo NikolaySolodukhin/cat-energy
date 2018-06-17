@@ -26,6 +26,7 @@
   position: relative;
   margin-bottom: 30px;
   padding-left: 70px;
+  color: var(--color-black);
   text-transform: uppercase;
 
   @include titletext(24px,37px);
@@ -162,6 +163,7 @@
   position: relative;
   display: block;
   padding-top: 19px;
+  color: var(--color-black);
   text-transform: uppercase;
   text-decoration: none;
   border-top: 1px solid var(--color-line);

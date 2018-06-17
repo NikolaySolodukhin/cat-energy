@@ -64,6 +64,7 @@
     margin-bottom: 41px;
     padding-top: 51px;
     text-align: left;
+    color: var(--color-black);
 
     @include titletext(60px, 60px);
   }
@@ -84,6 +85,7 @@
   @include tablet {
     margin-bottom: 45px;
     text-align: left;
+    color: var(--color-black);
 
     @include titletext(20px, 20px);
   }

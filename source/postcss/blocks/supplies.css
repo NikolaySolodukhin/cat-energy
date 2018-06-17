@@ -19,6 +19,7 @@
   display: inline-block;
   padding-right: 24px;
   padding-left: 20px;
+  color: var(--color-black);
   background-color: white;
   transform: translate(-21px, 10px);
 
@@ -67,8 +68,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 27px 37px 27px;
-    border-left: 1px solid var(--color-line);
     border-right: 1px solid var(--color-line);
+    border-left: 1px solid var(--color-line);
   }
 
   @include desktop {
@@ -76,8 +77,8 @@
     align-items: center;
     padding: 16px 0;
     padding-top: 15px;
-    border-left: none;
     border-right: none;
+    border-left: none;
   }
 
   &:last-child {
@@ -87,6 +88,7 @@
 
 .supplies__title {
   margin-bottom: 14px;
+  color: var(--color-black);
   text-transform: uppercase;
 
   @include titletext(16px,16px);

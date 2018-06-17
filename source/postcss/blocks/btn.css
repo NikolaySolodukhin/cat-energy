@@ -3,9 +3,11 @@
   padding-top: 13px;
   padding-bottom: 13px;
   font-family: inherit;
+  color: var(--color-black);
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+
   @include titletext(16px, 20px);
 
   @include tablet {

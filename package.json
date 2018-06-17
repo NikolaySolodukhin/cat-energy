@@ -7,15 +7,24 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "browser-sync": "2.23.x",
-    "core-js": "^2.5.6",
+    "core-js": "^2.5.7",
     "cross-env": "^5.1.5",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-requirejs": "^3.2.0",
     "gulp": "^3.9.1",
     "gulp-better-rollup": "^3.1.0",
     "gulp-changed": "^3.2.0",
@@ -48,7 +57,7 @@
     "postcss-url": "^7.3.2",
     "posthtml-include": "^1.1.0",
     "precss": "^3.1.2",
-    "prettier": "^1.12.1",
+    "prettier": "^1.13.5",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
@@ -69,10 +78,22 @@
     "build": "cross-env NODE_ENV=production gulp build"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.html": ["htmlhint", "git add"],
-    "*.css": ["stylelint --fix", "git add"],
-    "*.{json,md}": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.html": [
+      "htmlhint",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "editorconfig-cli": [
     "*.json",
@@ -85,5 +106,7 @@
   "engines": {
     "node": "8.11"
   },
-  "dependencies": {}
+  "dependencies": {
+    "criticalcss": "^2.1.0"
+  }
 }

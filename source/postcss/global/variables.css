@@ -17,7 +17,6 @@
   --padding-tablet: calc(50% - 354px);
   --padding-desktop: calc(50% - 610px);
   --padding-tablet-form: calc(50% - 315px);
-
 }
 
 @custom-media --mobile-width (min-width: 320px);

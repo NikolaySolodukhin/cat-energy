@@ -7,8 +7,10 @@
 .comment__title {
   margin-bottom: 32px;
   padding-left: var(--padding-mobile);
+  color: var(--color-black);
   border-bottom: 2px solid var(--color-primary);
   transform: translateY(-10px);
+
   @include titletext(24px,24px);
 
   @include tablet {
@@ -55,6 +57,7 @@
   min-width: 280px;
   padding: 12px 12px 10px 15px;
   font-family: inherit;
+  color: var(--color-black);
   text-transform: uppercase;
   border: 1px solid var(--color-menuline);
 
